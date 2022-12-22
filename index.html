@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+        integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">List of Users</header>
+    <div class="container">
+        <button class="btn btn_add" type="button">+ADD USER</button>
+        <div class="popup_wrapper hidden">
+            <div class="popup_contact">
+                <form class="form_add">
+                    <h3 class="form_title">New User</h3>
+                    <label for="name">Name</label>
+                    <input class="form-item" type="text" id="name" name="name" placeholder="Name">
+                    <div class="error"></div>
+                    <label for="password">Password (7 to 16 characters which contain at least one numeric digit, one
+                        uppercase and one lowercase letter)</label>
+                    <input class="form-item" type="password" id="password" name="password" placeholder="Password">
+                    <div class="error"></div>
+                    <label for="age">Age</label>
+                    <input class="form-item" type="number" id="age" name="age" min="1" max="100">
+                    <div class="error"></div>
+                    <label for="email">Email</label>
+                    <input class="form-item" type="email" id="email" name="email" placeholder="ivanov@example.com">
+                    <div class="error"></div>
+                    <label for="phone">Phone number</label>
+                    <input class="form-item" type="tel" id="phone" name="phone" placeholder="+xxx-xxx-xxx-xxx">
+                    <div class="error"></div>
+                    <label for="card">Bank card number</label>
+                    <input class="form-item" type="text" id="card" name="card" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    <div class="error"></div>
+                    <div class="btn_block">
+                        <button class="btn btn_save" type="button">Save</button>
+                        <button class="btn btn_edit" type="button">Edit</button>
+                        <button class="btn btn_cancel" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr class="headrow">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+
+    <script src="./js/data.js"></script>
+    <script src="./js/showpage.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/handlers.js"></script>
+    <script src="./js/formhandlers.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
